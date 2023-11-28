@@ -44,6 +44,39 @@ void displayByCategory(int Typecategory)
     // ---
 }
 
+const int maxCartSize = 10;
+Product cart[maxCartSize];
+int cartSize = 0;
+
+void addToCart(const Product& product)
+{
+    if (cartSize < maxCartSize)
+    {
+        cart[cartSize++] = product;
+        cout << "Product '" << product.productName << "' added to the cart!" << endl;
+    }
+    else
+    {
+        cout << "The cart is full. Cannot add more products." << endl;
+    }
+}
+
+
+void displayCart()
+{
+    cout << "Products in the cart:" << endl;
+    for (int i = 0; i < cartSize; i++)
+    {
+        cout << "Name: " << cart[i].productName;
+        cout << ", Brand: " << cart[i].productBrand;
+        cout << ", Category: " << cart[i].productCategory;
+        cout << ", Price: $" << cart[i].productPrice;
+        cout << ", ID: " << cart[i].productID << endl;
+    }
+    cout << endl;
+}
+
+
 void displayByPrice() {
     // Copying productList to tempProductList to not tampering with displayProduct index
     Product tempProductList[productCount];
@@ -143,6 +176,24 @@ int main()
         case 4:
             displayByPrice();
             break;
+        case 5:
+        {
+        int productID;
+        cout << "Enter the product ID to add to the cart: ";
+        cin >> productID;
+        for (int i = 0; i < productCount; i++)
+        {
+            if (productList[i].productID == productID)
+            {
+                addToCart(productList[i]);
+                break;
+            }
+        }
+        break;
+        }
+        case 6:
+        displayCart();
+        break;
         case 7:
             cout << "exiting the program, goodbye";
             break;
