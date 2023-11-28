@@ -158,7 +158,7 @@ int main()
         cout << "3. Display Products by brand" << endl;
         cout << "4. Display Product by Price" << endl;
         cout << "5. Add products to cart" << endl;
-        cout << "6. Buy products from the cart" << endl;
+        cout << "6. Display products from the cart" << endl;
         cout << "7. Exit" << endl;
         cout << "please select your choice = ";
         cin >> option;
