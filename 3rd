@@ -208,6 +208,7 @@ bool userAuthentication(string userName, string userPass)
 void searchProduct(){
     string search;
     cout << "Enter Product name : ";
+    cin.ignore();
     getline(cin, search);
     bool found = false;
     for (int i = 0; i<productCount; i++){
