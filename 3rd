@@ -47,7 +47,7 @@ void displayProducts()
 
 void displayByCategory(int typeCategory)
 {
-    if (typeCategory > 0 && typeCategory <= 5)
+    if (typeCategory > 0 && typeCategory <= 7)
     {
         cout << "Products in the selected category : " << endl;
         for (int i = 0; i < productCount; i++)
@@ -85,6 +85,22 @@ void displayByCategory(int typeCategory)
                 cout << ", ID : " << productList[i].productID << endl;
             }
             else if (typeCategory == 5 && productList[i].productCategory == "Komponen")
+            {
+                cout << "Name : " << productList[i].productName;
+                cout << ", Brand : " << productList[i].productBrand;
+                cout << ", Category : " << productList[i].productCategory;
+                cout << ", Price : $" << productList[i].productPrice;
+                cout << ", ID : " << productList[i].productID << endl;
+            }
+            else if (typeCategory == 6 && productList[i].productCategory == "ActionCam")
+            {
+                cout << "Name : " << productList[i].productName;
+                cout << ", Brand : " << productList[i].productBrand;
+                cout << ", Category : " << productList[i].productCategory;
+                cout << ", Price : $" << productList[i].productPrice;
+                cout << ", ID : " << productList[i].productID << endl;
+            }
+            else if (typeCategory == 7 && productList[i].productCategory == "Gymbal")
             {
                 cout << "Name : " << productList[i].productName;
                 cout << ", Brand : " << productList[i].productBrand;
@@ -272,7 +288,7 @@ int main()
         {
             int categoryOption;
             cout << "Enter category option: " << endl;
-            cout << "1. Laptop\n2. Handphone\n3. Smartwatch\n4. SSD\n5. Komponen" << endl;
+            cout << "1. Laptop\n2. Handphone\n3. Smartwatch\n4. SSD\n5. Komponen\n6. ActionCam\n7. Gymbal" << endl;
             cin >> categoryOption;
             displayByCategory(categoryOption);
             break;
