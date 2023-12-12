@@ -26,8 +26,8 @@ void predefinedProduct()
     productList[productCount++] = {"HUAWEI Band 8", "HUAWEI", "Smartwatch", 599.90, 345};
     productList[productCount++] = {"Kingston SSD A400 480GB", "KINGSTON", "SSD", 499.90, 401};
     productList[productCount++] = {"Resistor 1k", "RESISTOR", "Komponen", 500.00, 115};
-    productList[productCount++] = {"MSI Katana GF66", "MSI", "Laptop", 13000000, 116};
-    productList[productCount++] = {"Acer Aspire 5", "ACER", "Laptop", 10000000, 125};
+    productList[productCount++] = {"MSI Katana GF66", "MSI", "Laptop", 1300, 116};
+    productList[productCount++] = {"Acer Aspire 5", "ACER", "Laptop", 1000, 125};
     productList[productCount++] = {"GoPro Hero 6", "GOPRO", "ActionCam", 299, 501};
     productList[productCount++] = {"DJI Osmo 3", "DJI", "Gymbal", 199, 502};
     productList[productCount++] = {"Acer Aspire 7", "ACER", "Laptop", 500, 127};
